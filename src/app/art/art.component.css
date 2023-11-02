@@ -1,0 +1,21 @@
+.main {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+img {
+    height: 400px;
+    width: 80%;
+}
+
+.left {
+    width: 42vw
+}
+
+.right {
+    width: 42vw;
+    text-align: left;
+}

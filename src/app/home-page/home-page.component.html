@@ -1,0 +1,15 @@
+<h1 *ngIf="loading">Data is Loading......</h1>
+<div>
+  <app-art-item
+   *ngFor="let art of artWorksList|slice:pageIndex*pageSize:pageIndex*pageSize+pageSize" 
+   [art_item]="art" 
+   [searchText]="searchText"
+   >
+  </app-art-item>
+</div>
+<mat-paginator [length]="artWorksList.length"
+               [showFirstLastButtons]="true"
+               [pageSize]="10"
+               [pageSizeOptions]="[5, 10, 20]"
+               (page)="onPageChange($event)">
+  </mat-paginator>

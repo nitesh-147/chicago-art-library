@@ -1,0 +1,34 @@
+<div>
+    <mat-toolbar color="primary" class="mat-elevation-z8 nav">
+        <button mat-icon-button (click)="drawer.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span class="logo" routerLink=""> <span>C</span>hicago <span>A</span>rt <span>E</span>xplorer</span>
+        <span class="example-spacer"></span>
+        <input type="search" name="search" id="search" placeholder="Enter keyword to search" value=""
+            [(ngModel)]="searchValue">
+        <button class="btn btn-warning" [routerLink]="'/searchResult/'+searchValue" [disabled]="searchValue.length===0">Search</button>    
+    </mat-toolbar>
+</div>
+<div>
+    <mat-drawer-container autosize>
+        <mat-drawer #drawer opened="true" mode="side" position="start" class="matDrawer">
+            <mat-nav-list>
+                <mat-list-item>
+                    <button mat-button routerLink="artworks" routerLinkActive="active"><mat-icon>list</mat-icon> Art
+                        Works</button>
+                </mat-list-item>
+                <mat-list-item>
+                    <button mat-button routerLink="favourites" routerLinkActive="active"><mat-icon>favorite</mat-icon>
+                        Favourites </button>
+                </mat-list-item>
+            </mat-nav-list>
+        </mat-drawer>
+        <mat-drawer-content>
+            <div style="text-align: center;min-height: 600px;">
+                <router-outlet searchValue="searchValue"></router-outlet>
+            </div>
+        </mat-drawer-content>
+    </mat-drawer-container>
+</div>
+

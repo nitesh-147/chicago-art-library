@@ -1,0 +1,9 @@
+div{
+    display: flex;
+    flex-direction: row;
+    row-gap: 10px;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* background-color: rgb(78, 80, 80); */
+}

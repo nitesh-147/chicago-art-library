@@ -1,0 +1,23 @@
+div{
+    height:310px;
+    width:220px;
+    background-color: rgb(242, 242, 249);
+    border-radius: 10px;
+    padding-top: 10px;
+}
+
+img{
+    height:200px;
+    width:180px;
+    border-radius: 10px;
+}
+
+h2{
+    margin-bottom: 0;
+}
+
+.btn{
+    height:30px;
+    padding:5px 10px;
+    padding-top:2px;
+}

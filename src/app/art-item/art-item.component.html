@@ -1,0 +1,10 @@
+<div *ngIf="art_item.title.toLowerCase().includes(searchText) || searchText===''">
+    <img [src]="imageUrl" onerror="this.onerror=null;[this.src]='alternateImageUrl';">
+    <h2>{{art_item.title | slice:0:18}}</h2>
+    <p>
+        <em>
+            {{art_item.artist_title || 'Mr. abc' | slice:0:20}}
+        </em>
+    </p>
+    <button [routerLink]="'/artworks/art/'+art_item.id" class="btn btn-info">view item</button>
+</div>

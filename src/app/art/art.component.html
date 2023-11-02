@@ -1,0 +1,23 @@
+<div class="main">
+    <div class="left">
+        <img [src]="imageUrl" alt="Photo">
+    </div>
+    <div class="right">
+       <h1>
+        {{artWork.title || 'Untitled Photo'}}
+       </h1>
+       <h2>
+        {{artWork.artwork_type_title}}
+       </h2>
+       <p>
+        <em>
+            {{artWork.artist_title}}
+        </em>
+       </p>
+       <hr>
+       <p id="prodDescription">
+        <span><strong>Description: </strong></span>
+       </p>
+        <button (click)="OnAddToFavourite()" class="btn btn-warning">Add to Favourite</button>
+    </div>
+</div>
